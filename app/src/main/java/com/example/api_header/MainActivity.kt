@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val txt=findViewById<TextView>(R.id.txt_respuesta)
         val txt_metal=findViewById<TextView>(R.id.txtMetal)
+        val txt_multiline=findViewById<TextView>(R.id.txt_Multiline)
         val url = "https://www.goldapi.io/api/XAU/USD"
 
         val cola = Volley.newRequestQueue(this)
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                         "Precio en gramos de 20k :${metal.currency}"+" "+"${metal.price_gram_20k}\n"+
                         "Precio en gramos de 18k :${metal.currency}"+" "+"${metal.price_gram_18k}\n"
                 txt_metal.text="${metal.metal}"
+                txt_multiline.text=txt.text
             },
             Response.ErrorListener { txt.text="Ocurrio un error" })
         {

@@ -5,7 +5,7 @@ class Metal {
     var metal=""
     var currency =""
     var exchange =""
-    var symbol="FOREXCOM:XAUUSD"
+    var symbol=""
     var prev_close_price=1820.83
     var open_price=1822.65
     var low_price=1821.79
